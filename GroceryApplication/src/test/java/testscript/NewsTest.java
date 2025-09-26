@@ -2,61 +2,57 @@ package testscript;
 
 import java.io.IOException;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import base.TestNGBase;
+import pages.LoginPage;
+import pages.NewsPage;
 import utilities.ExcelUtility;
 
 public class NewsTest extends TestNGBase {
 	
-	@Test(description = "Add news")
+	@Test(description = "Add news" , priority = 1)
 	
 	public void verifyAddNews() throws IOException {
 		
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");
-		WebElement userName = driver.findElement(By.xpath("//input[@name='username']"));
-		userName.sendKeys(usernameValue);
-		WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
-		password.sendKeys(passwordValue);
-		WebElement signIn = driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block']"));
-		signIn.click();
-		WebElement newsMoreInfo = driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class= 'small-box-footer']"));
-		newsMoreInfo.click();
-		WebElement newButton = driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-danger']"));
-		newButton.click();
-		WebElement addNews = driver.findElement(By.xpath("//textarea[@id='news']"));
-		addNews.sendKeys("This a test news");
-		WebElement save = driver.findElement(By.xpath("//button[@class= 'btn btn-danger']"));
-		save.click();
+		LoginPage login = new LoginPage(driver);
+		login.enterUserName(usernameValue);
+		login.enterPassword(passwordValue);
+		login.signInClick();
+		
+		NewsPage news = new NewsPage(driver);
+		news.newsMoreInfoClick();
+		news.newButtonClick();
+		news.addNewNews();
+		news.saveButtonClick();
+		boolean isAlertDisplayed = news.newsAlertDisplay();
+		Assert.assertTrue(isAlertDisplayed,"Alert not displayed");
 		
 		
 		
 	}
 
-	@Test(description = "Return to Home page")
+	@Test(description = "Return to Home page", priority = 2)
 	
 	public void verifyReturnToHome() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");
-		WebElement userName = driver.findElement(By.xpath("//input[@name='username']"));
-		userName.sendKeys(usernameValue);
-		WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
-		password.sendKeys(passwordValue);
-		WebElement signIn = driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block']"));
-		signIn.click();
-		WebElement newsMoreInfo = driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class= 'small-box-footer']"));
-		newsMoreInfo.click();
-		WebElement newButton = driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-danger']"));
-		newButton.click();
-		WebElement homeLink = driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.comadmin/dashboard']"));
-		homeLink.click();
-		String expected = "https://groceryapp.uniqassosiates.comadmin/dashboard";
+		LoginPage login = new LoginPage(driver);
+		login.enterUserName(usernameValue);
+		login.enterPassword(passwordValue);
+		login.signInClick();
+		
+		NewsPage news = new NewsPage(driver);
+		news.newsMoreInfoClick();
+		news.homeLinkClick();
+	
+	
+		
+		String expected = "https://groceryapp.uniqassosiates.com/admin/home";
 		String actual = driver.getCurrentUrl();
-		Assert.assertEquals(actual, expected,"Not redirected to Homepage");
+		Assert.assertEquals(actual, expected,"The page is not redirecting to the home page.");
 		
 	}
 	

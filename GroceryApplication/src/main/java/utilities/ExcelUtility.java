@@ -2,10 +2,13 @@ package utilities;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import constant.Constant;
 
 public class ExcelUtility {
 	
@@ -19,7 +22,7 @@ public class ExcelUtility {
 
 	{
 
-	f=new FileInputStream("C:\\Users\\melvi\\eclipse-workspace\\GroceryApplication\\src\\test\\resources\\TestData.xlsx");
+	f=new FileInputStream(Constant.TESTDATAFILE);
 
 	w=new XSSFWorkbook(f);
 
@@ -35,7 +38,7 @@ public class ExcelUtility {
 
 	public static String getIntegerData(int a,int b,String sheet) throws IOException {
 
-	f=new FileInputStream("C:\\Users\\melvi\\eclipse-workspace\\GroceryApplication\\src\\test\\resources\\TestData.xlsx");
+	f=new FileInputStream(Constant.TESTDATAFILE);
 	
 	w=new XSSFWorkbook(f);
 

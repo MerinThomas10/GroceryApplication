@@ -1,5 +1,6 @@
 package base;
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,6 +21,7 @@ public class TestNGBase {
 		driver=new ChromeDriver(options);
 		driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		}
 		@AfterMethod
 		public void browserClose() {
