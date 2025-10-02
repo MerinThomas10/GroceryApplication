@@ -7,6 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.TestNGBase;
+import constant.Constants;
+import constant.Messages;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
@@ -17,8 +19,8 @@ public class HomeTest extends TestNGBase {
 	
 	public void VerifyLogout() throws IOException {
 		
-			String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");
-			String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");
+			String usernameValue=ExcelUtility.getStringData(1, 0, Constants.LOGINSHEET);
+			String passwordValue=ExcelUtility.getStringData(1, 1, Constants.LOGINSHEET);
 			LoginPage login = new LoginPage(driver);
 			login.enterUserName(usernameValue);
 			login.enterPassword(passwordValue);
@@ -30,7 +32,7 @@ public class HomeTest extends TestNGBase {
 			
 			String expected ="https://groceryapp.uniqassosiates.com/admin/login";
 			String actual = driver.getCurrentUrl();
-			Assert.assertEquals(actual, expected, "Logout not successful");
+			Assert.assertEquals(actual, expected, Messages.LOGOUT_ASSERT);
 
 			
 		

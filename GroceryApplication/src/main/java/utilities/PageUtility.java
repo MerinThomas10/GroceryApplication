@@ -11,7 +11,7 @@ public class PageUtility {
 	
 	public void selectByVisibleText(WebElement element, String value) {
 		Select object = new Select(element);
-		object.selectByContainsVisibleText(value);
+		object.selectByVisibleText(value);
 	}
 	
 	public void clickOnElement(WebElement element) {

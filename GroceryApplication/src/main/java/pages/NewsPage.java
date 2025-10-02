@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import constant.Constants;
 import utilities.PageUtility;
 import utilities.WaitUtility;
 
@@ -25,7 +26,7 @@ public class NewsPage {
 	}
 	
 	
-	@FindBy(xpath ="//a[text()='Home']")WebElement newButton;
+	@FindBy(xpath ="//a[@class='btn btn-rounded btn-danger']")WebElement newButton;
 	public void newButtonClick() {
 
 		wait.waitUntilClickable(driver, newButton);
@@ -34,7 +35,7 @@ public class NewsPage {
 	
 	@FindBy(xpath ="//textarea[@id='news']")WebElement addNews;
 	public void addNewNews() {
-		page.sendDataToElement(addNews, "This is a sample news");
+		page.sendDataToElement(addNews, Constants.NEW_NEWS);
 	}
 	
 	@FindBy(xpath ="//button[@name='create']")WebElement save;
@@ -49,7 +50,7 @@ public class NewsPage {
 		
 		return newsAlert.isDisplayed();
 	}
-	@FindBy(xpath ="//a[@href='https://groceryapp.uniqassosiates.comadmin/dashboard']")WebElement homeLink;
+	@FindBy(xpath ="//a[@href='https://groceryapp.uniqassosiates.com/admin/home' and text()='Home']")WebElement homeLink;
 	public void homeLinkClick() {
 		page.clickOnElement(homeLink);
 	

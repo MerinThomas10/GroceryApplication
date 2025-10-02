@@ -42,7 +42,7 @@ public class AdminPage {
 	public void enterNewUserType(String userType) {
 		//Select select = new Select(newUserType);
 		//select.selectByVisibleText(userType);
-		page.selectByVisibleText(newUserType, null);
+		page.selectByVisibleText(newUserType, userType);
 	}
 	
 	@FindBy(xpath ="//button[@name='Create']")WebElement saveButton;
@@ -73,7 +73,7 @@ public class AdminPage {
 	public void searchUserType( String userType) {
 		//Select select = new Select(userTypeSearch);
 		//select.selectByVisibleText(userType);
-		page.selectByVisibleText(newUserType, null);
+		page.selectByVisibleText(userTypeSearch, userType);
 	}
 	
 	@FindBy(xpath ="//button[@name='Search']")WebElement searchButton1;
@@ -81,9 +81,9 @@ public class AdminPage {
 		page.clickOnElement(searchButton1);
 	}
 	
-	@FindBy(xpath ="//button[@class='btn btn-block-sm btn-danger' and @name = 'Search']")WebElement search;
+	@FindBy(xpath ="//h4[@class='card-title' and text()='Admin Users']")WebElement searchResult;
 	public boolean searchTile() {
-		return search.isDisplayed();
+		return searchResult.isDisplayed();
 	}
 	@FindBy(xpath ="//a[@class='btn btn-rounded btn-warning']")WebElement resetButton;
 	public void resetButtonClick() {
