@@ -7,5 +7,6 @@ public class Constants {
 	public static final String LOGINSHEET="LoginPage";
 	public static final String ADMINUSER ="Admin";
 	public static final String NEW_NEWS ="This is a sample news";
+	public static final String CONFIG_FILE = System.getProperty("user.dir")+"\\src\\main\\resources\\config.properties";
 	
 }

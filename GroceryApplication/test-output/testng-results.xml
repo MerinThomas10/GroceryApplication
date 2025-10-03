@@ -1,22 +1,755 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="2" ignored="2" total="5" passed="0" failed="1" skipped="0">
+<testng-results retried="3" ignored="3" total="14" passed="2" failed="4" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-02T13:56:24 IST" name="Grouping" finished-at="2025-10-02T13:56:26 IST" duration-ms="2107">
+  <suite started-at="2025-10-03T11:27:13 IST" name="parallel" finished-at="2025-10-03T11:27:32 IST" duration-ms="19674">
     <groups>
       <group name="smoke">
-        <method signature="LoginTest.verifyLoginByValidCredentials()[pri:1, instance:testscript.LoginTest@5b7a5baa]" name="verifyLoginByValidCredentials" class="testscript.LoginTest"/>
+        <method signature="LoginTest.verifyLoginByValidCredentials()[pri:1, instance:testscript.LoginTest@7bbc8656]" name="verifyLoginByValidCredentials" class="testscript.LoginTest"/>
+        <method signature="LoginTest.verifyLoginByValidCredentials()[pri:1, instance:testscript.LoginTest@3e62d773]" name="verifyLoginByValidCredentials" class="testscript.LoginTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-10-02T13:56:24 IST" name="Test" finished-at="2025-10-02T13:56:26 IST" duration-ms="2107">
+    <test started-at="2025-10-03T11:27:13 IST" name="chromeTest" finished-at="2025-10-03T11:27:19 IST" duration-ms="6615">
       <class name="testscript.LoginTest">
-        <test-method retried="true" signature="verifyLoginByValidCredentials()[pri:1, instance:testscript.LoginTest@5b7a5baa]" started-at="2025-10-02T13:56:24 IST" name="verifyLoginByValidCredentials" description="Login by valid credentials" finished-at="2025-10-02T13:56:26 IST" duration-ms="1712" status="SKIP">
-          <exception class="java.lang.NullPointerException">
+        <test-method is-config="true" signature="initalizeBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:13 IST" name="initalizeBrowser" finished-at="2025-10-03T11:27:15 IST" duration-ms="2130" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method is-config="true" signature="initalizeBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:13 IST" name="initalizeBrowser" finished-at="2025-10-03T11:27:15 IST" duration-ms="2132" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method is-config="true" signature="initalizeBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:13 IST" name="initalizeBrowser" finished-at="2025-10-03T11:27:15 IST" duration-ms="2546" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.getCurrentUrl()" because "this.driver" is null]]>
+              <![CDATA[invalid session id
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a5b4a36ea2f4a6a65bd07b18574c1e, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.210, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\melvi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 140.0.7339.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64a5b4a36ea2f4a6a65bd07b18574c1e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.getCurrentUrl()" because "this.driver" is null
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a5b4a36ea2f4a6a65bd07b18574c1e, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.210, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\melvi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 140.0.7339.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64a5b4a36ea2f4a6a65bd07b18574c1e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1067)
+at base.TestNGBase.initalizeBrowser(TestNGBase.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method is-config="true" signature="initalizeBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:13 IST" name="initalizeBrowser" finished-at="2025-10-03T11:27:15 IST" duration-ms="2546" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a5b4a36ea2f4a6a65bd07b18574c1e, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.210, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\melvi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 140.0.7339.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64a5b4a36ea2f4a6a65bd07b18574c1e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a5b4a36ea2f4a6a65bd07b18574c1e, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.210, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\melvi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 140.0.7339.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64a5b4a36ea2f4a6a65bd07b18574c1e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1067)
+at base.TestNGBase.initalizeBrowser(TestNGBase.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method signature="verifyLoginByInValidUsername()[pri:3, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:15 IST" name="verifyLoginByInValidUsername" description="To test login by invalid username" finished-at="2025-10-03T11:27:15 IST" duration-ms="135" status="FAIL">
+          <exception class="org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException">
+            <message>
+              <![CDATA[No valid entries or contents found, this is not a valid OOXML (Office Open XML) file]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:159)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:157)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
+at utilities.ExcelUtility.getStringData(ExcelUtility.java:27)
+at testscript.LoginTest.verifyLoginByInValidUsername(LoginTest.java:48)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0xcfd06fa
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:770)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:150)
+... 24 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginByInValidUsername -->
+        <test-method retried="true" signature="verifyLoginByValidCredentials()[pri:1, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:15 IST" name="verifyLoginByValidCredentials" description="Login by valid credentials" finished-at="2025-10-03T11:27:15 IST" duration-ms="162" status="SKIP">
+          <exception class="java.io.IOException">
+            <message>
+              <![CDATA[Stream Closed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.IOException: Stream Closed
+at java.base/java.io.FileInputStream.available0(Native Method)
+at java.base/java.io.FileInputStream.available(FileInputStream.java:473)
+at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
+at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:627)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:1146)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:1098)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:1028)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:78)
+at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:245)
+at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:208)
+at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.<init>(ZipArchiveFakeEntry.java:83)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:98)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:157)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
+at utilities.ExcelUtility.getStringData(ExcelUtility.java:27)
+at testscript.LoginTest.verifyLoginByValidCredentials(LoginTest.java:16)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.IOException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginByValidCredentials -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:15 IST" name="browserClose" finished-at="2025-10-03T11:27:15 IST" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:15 IST" name="browserClose" finished-at="2025-10-03T11:27:15 IST" duration-ms="248" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a5b4a36ea2f4a6a65bd07b18574c1e, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.210, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\melvi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 140.0.7339.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64a5b4a36ea2f4a6a65bd07b18574c1e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a5b4a36ea2f4a6a65bd07b18574c1e, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.210, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\melvi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 140.0.7339.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64a5b4a36ea2f4a6a65bd07b18574c1e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:418)
+at base.TestNGBase.browserClose(TestNGBase.java:45)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+        <test-method signature="verifyLoginByInValidCredentials()[pri:4, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:15 IST" name="verifyLoginByInValidCredentials" description="To verify login by Invalid credentials" finished-at="2025-10-03T11:27:15 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a5b4a36ea2f4a6a65bd07b18574c1e, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.210, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\melvi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 140.0.7339.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64a5b4a36ea2f4a6a65bd07b18574c1e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a5b4a36ea2f4a6a65bd07b18574c1e, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.210, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\melvi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 140.0.7339.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64a5b4a36ea2f4a6a65bd07b18574c1e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:418)
+at base.TestNGBase.browserClose(TestNGBase.java:45)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginByInValidCredentials -->
+        <test-method signature="verifyLoginByInvalidPassword()[pri:2, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:15 IST" name="verifyLoginByInvalidPassword" description="To test login using invalid password" finished-at="2025-10-03T11:27:15 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a5b4a36ea2f4a6a65bd07b18574c1e, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.210, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\melvi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 140.0.7339.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64a5b4a36ea2f4a6a65bd07b18574c1e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a5b4a36ea2f4a6a65bd07b18574c1e, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.210, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\melvi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 140.0.7339.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64a5b4a36ea2f4a6a65bd07b18574c1e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:418)
+at base.TestNGBase.browserClose(TestNGBase.java:45)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginByInvalidPassword -->
+        <test-method is-config="true" signature="initalizeBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:15 IST" name="initalizeBrowser" finished-at="2025-10-03T11:27:17 IST" duration-ms="1472" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:15 IST" name="browserClose" finished-at="2025-10-03T11:27:15 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:15 IST" name="browserClose" finished-at="2025-10-03T11:27:15 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+        <test-method retried="true" signature="verifyLoginByValidCredentials()[pri:1, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:17 IST" name="verifyLoginByValidCredentials" description="Login by valid credentials" finished-at="2025-10-03T11:27:17 IST" duration-ms="760" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Login not successful with valid credentials expected [https://groceryapp.uniqassosiates.com/admin] but found [https://groceryapp.uniqassosiates.com/admin/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Login not successful with valid credentials expected [https://groceryapp.uniqassosiates.com/admin] but found [https://groceryapp.uniqassosiates.com/admin/login]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at testscript.LoginTest.verifyLoginByValidCredentials(LoginTest.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginByValidCredentials -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:17 IST" name="browserClose" finished-at="2025-10-03T11:27:17 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+        <test-method is-config="true" signature="initalizeBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:17 IST" name="initalizeBrowser" finished-at="2025-10-03T11:27:19 IST" duration-ms="1407" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method signature="verifyLoginByValidCredentials()[pri:1, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:19 IST" name="verifyLoginByValidCredentials" description="Login by valid credentials" finished-at="2025-10-03T11:27:19 IST" duration-ms="382" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Login not successful with valid credentials expected [https://groceryapp.uniqassosiates.com/admin] but found [https://groceryapp.uniqassosiates.com/admin/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Login not successful with valid credentials expected [https://groceryapp.uniqassosiates.com/admin] but found [https://groceryapp.uniqassosiates.com/admin/login]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at testscript.LoginTest.verifyLoginByValidCredentials(LoginTest.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginByValidCredentials -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:testscript.LoginTest@7bbc8656]" started-at="2025-10-03T11:27:19 IST" name="browserClose" finished-at="2025-10-03T11:27:19 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+      </class> <!-- testscript.LoginTest -->
+    </test> <!-- chromeTest -->
+    <test started-at="2025-10-03T11:27:20 IST" name="firefoxTest" finished-at="2025-10-03T11:27:32 IST" duration-ms="12758">
+      <class name="testscript.LoginTest">
+        <test-method is-config="true" signature="initalizeBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:20 IST" name="initalizeBrowser" finished-at="2025-10-03T11:27:26 IST" duration-ms="6602" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method is-config="true" signature="initalizeBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:20 IST" name="initalizeBrowser" finished-at="2025-10-03T11:27:25 IST" duration-ms="5293" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method is-config="true" signature="initalizeBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:20 IST" name="initalizeBrowser" finished-at="2025-10-03T11:27:25 IST" duration-ms="5342" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method is-config="true" signature="initalizeBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:20 IST" name="initalizeBrowser" finished-at="2025-10-03T11:27:26 IST" duration-ms="6189" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method signature="verifyLoginByInvalidPassword()[pri:2, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:25 IST" name="verifyLoginByInvalidPassword" description="To test login using invalid password" finished-at="2025-10-03T11:27:26 IST" duration-ms="1645" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginByInvalidPassword -->
+        <test-method signature="verifyLoginByInValidUsername()[pri:3, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:25 IST" name="verifyLoginByInValidUsername" description="To test login by invalid username" finished-at="2025-10-03T11:27:26 IST" duration-ms="1596" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[The element with the reference 0c1d548f-a799-4776-9947-06d6be84b770 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, clickElement {id=0c1d548f-a799-4776-9947-06d6be84b770}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (7e14a7c5-939f-49c1-aeed-bf351e3ab487)] -> xpath: //button[@class='btn btn-dark btn-block']]
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: The element with the reference 0c1d548f-a799-4776-9947-06d6be84b770 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, clickElement {id=0c1d548f-a799-4776-9947-06d6be84b770}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (7e14a7c5-939f-49c1-aeed-bf351e3ab487)] -> xpath: //button[@class='btn btn-dark btn-block']]
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at pages.LoginPage.signInClick(LoginPage.java:35)
+at testscript.LoginTest.verifyLoginByInValidUsername(LoginTest.java:53)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginByInValidUsername -->
+        <test-method signature="verifyLoginByInValidCredentials()[pri:4, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:26 IST" name="verifyLoginByInValidCredentials" description="To verify login by Invalid credentials" finished-at="2025-10-03T11:27:28 IST" duration-ms="2180" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:325)
+at testscript.LoginTest.verifyLoginByInValidCredentials(LoginTest.java:70)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginByInValidCredentials -->
+        <test-method retried="true" signature="verifyLoginByValidCredentials()[pri:1, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:26 IST" name="verifyLoginByValidCredentials" description="Login by valid credentials" finished-at="2025-10-03T11:27:28 IST" duration-ms="1767" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:325)
 at testscript.LoginTest.verifyLoginByValidCredentials(LoginTest.java:18)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -28,109 +761,222 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginByValidCredentials -->
-        <test-method retried="true" signature="verifyLoginByValidCredentials()[pri:1, instance:testscript.LoginTest@5b7a5baa]" started-at="2025-10-02T13:56:26 IST" name="verifyLoginByValidCredentials" description="Login by valid credentials" finished-at="2025-10-02T13:56:26 IST" duration-ms="148" status="SKIP">
-          <exception class="java.lang.NullPointerException">
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:26 IST" name="browserClose" finished-at="2025-10-03T11:27:28 IST" duration-ms="1424" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:27 IST" name="browserClose" finished-at="2025-10-03T11:27:28 IST" duration-ms="1398" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.getCurrentUrl()" because "this.driver" is null]]>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, close {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.getCurrentUrl()" because "this.driver" is null
-at testscript.LoginTest.verifyLoginByValidCredentials(LoginTest.java:18)
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, close {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:418)
+at base.TestNGBase.browserClose(TestNGBase.java:45)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginByValidCredentials -->
-        <test-method signature="verifyLoginByValidCredentials()[pri:1, instance:testscript.LoginTest@5b7a5baa]" started-at="2025-10-02T13:56:26 IST" name="verifyLoginByValidCredentials" description="Login by valid credentials" finished-at="2025-10-02T13:56:26 IST" duration-ms="130" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        </test-method> <!-- browserClose -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:28 IST" name="browserClose" finished-at="2025-10-03T11:27:28 IST" duration-ms="4" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.getCurrentUrl()" because "this.driver" is null]]>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, close {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.getCurrentUrl()" because "this.driver" is null
-at testscript.LoginTest.verifyLoginByValidCredentials(LoginTest.java:18)
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, close {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:418)
+at base.TestNGBase.browserClose(TestNGBase.java:45)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:28 IST" name="browserClose" finished-at="2025-10-03T11:27:28 IST" duration-ms="3" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, close {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, close {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:418)
+at base.TestNGBase.browserClose(TestNGBase.java:45)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
+        <test-method is-config="true" signature="initalizeBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:28 IST" name="initalizeBrowser" finished-at="2025-10-03T11:27:31 IST" duration-ms="3490" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalizeBrowser -->
+        <test-method signature="verifyLoginByValidCredentials()[pri:1, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:31 IST" name="verifyLoginByValidCredentials" description="Login by valid credentials" finished-at="2025-10-03T11:27:32 IST" duration-ms="877" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginByValidCredentials -->
+        <test-method is-config="true" signature="browserClose()[pri:0, instance:testscript.LoginTest@3e62d773]" started-at="2025-10-03T11:27:32 IST" name="browserClose" finished-at="2025-10-03T11:27:32 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClose -->
       </class> <!-- testscript.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Grouping -->
+    </test> <!-- firefoxTest -->
+  </suite> <!-- parallel -->
 </testng-results>

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Grouping" class="navigator-link">
-              <span class="suite-name border-failed">Grouping</span>
+            <a href="#" panel-name="suite-parallel" class="navigator-link">
+              <span class="suite-name border-failed">parallel</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Grouping" class="navigator-link ">
-                    <span>C:\Users\melvi\git\GroceryApplication\GroceryApplication\Grouping.xml</span>
+                  <a href="#" panel-name="test-xml-parallel" class="navigator-link ">
+                    <span>C:\Users\melvi\git\GroceryApplication\GroceryApplication\multibrowser.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Grouping" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                  <a href="#" panel-name="testlist-parallel" class="navigator-link ">
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Grouping" class="navigator-link ">
+                  <a href="#" panel-name="group-parallel" class="navigator-link ">
                     <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Grouping" class="navigator-link ">
+                  <a href="#" panel-name="times-parallel" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Grouping" class="navigator-link ">
+                  <a href="#" panel-name="reporter-parallel" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Grouping" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-parallel" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Grouping" class="navigator-link ">
+                  <a href="#" panel-name="chronological-parallel" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,40 +92,98 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,  2 skipped,  </span>
+                    <span class="method-stats">11 methods, 4 failed,  5 skipped,  2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
                     <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Grouping" class="hide-methods failed suite-Grouping"> (hide)</a> <!-- hide-methods failed suite-Grouping -->
-                      <a href="#" panel-name="suite-Grouping" class="show-methods failed suite-Grouping"> (show)</a> <!-- show-methods failed suite-Grouping -->
+                      <a href="#" panel-name="suite-parallel" class="hide-methods failed suite-parallel"> (hide)</a> <!-- hide-methods failed suite-parallel -->
+                      <a href="#" panel-name="suite-parallel" class="show-methods failed suite-parallel"> (show)</a> <!-- show-methods failed suite-parallel -->
                     </span>
-                    <div class="method-list-content failed suite-Grouping">
+                    <div class="method-list-content failed suite-parallel">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Grouping" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByValidCredentials">verifyLoginByValidCredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-parallel" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByInValidCredentials">verifyLoginByInValidCredentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Grouping -->
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-parallel" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByInValidUsername">verifyLoginByInValidUsername</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-parallel" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByInValidUsername">verifyLoginByInValidUsername</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-parallel" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByValidCredentials">verifyLoginByValidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-parallel -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-parallel" class="hide-methods skipped suite-parallel"> (hide)</a> <!-- hide-methods skipped suite-parallel -->
+                      <a href="#" panel-name="suite-parallel" class="show-methods skipped suite-parallel"> (show)</a> <!-- show-methods skipped suite-parallel -->
+                    </span>
+                    <div class="method-list-content skipped suite-parallel">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-parallel" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByInValidCredentials">verifyLoginByInValidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-parallel" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByInvalidPassword">verifyLoginByInvalidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-parallel -->
                   </li>
                   <li>
                     <span class="method-list-title skipped">Retried methods</span>
                     <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Grouping" class="hide-methods skipped suite-Grouping"> (hide)</a> <!-- hide-methods skipped suite-Grouping -->
-                      <a href="#" panel-name="suite-Grouping" class="show-methods skipped suite-Grouping"> (show)</a> <!-- show-methods skipped suite-Grouping -->
+                      <a href="#" panel-name="suite-parallel" class="hide-methods skipped suite-parallel"> (hide)</a> <!-- hide-methods skipped suite-parallel -->
+                      <a href="#" panel-name="suite-parallel" class="show-methods skipped suite-parallel"> (show)</a> <!-- show-methods skipped suite-parallel -->
                     </span>
-                    <div class="method-list-content skipped suite-Grouping">
+                    <div class="method-list-content skipped suite-parallel">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Grouping" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByValidCredentials">verifyLoginByValidCredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-parallel" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByValidCredentials">verifyLoginByValidCredentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Grouping" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByValidCredentials">verifyLoginByValidCredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-parallel" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByValidCredentials">verifyLoginByValidCredentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Grouping -->
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-parallel" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByValidCredentials">verifyLoginByValidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-parallel -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-parallel" class="hide-methods passed suite-parallel"> (hide)</a> <!-- hide-methods passed suite-parallel -->
+                      <a href="#" panel-name="suite-parallel" class="show-methods passed suite-parallel"> (show)</a> <!-- show-methods passed suite-parallel -->
+                    </span>
+                    <div class="method-list-content passed suite-parallel">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-parallel" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByInvalidPassword">verifyLoginByInvalidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-parallel" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginByValidCredentials">verifyLoginByValidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-parallel -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -136,8 +194,8 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Grouping" class="panel Grouping">
-          <div class="suite-Grouping-class-failed">
+        <div panel-name="suite-parallel" class="panel parallel">
+          <div class="suite-parallel-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
               <span class="class-name">testscript.LoginTest</span>
@@ -145,21 +203,125 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="verifyLoginByInValidCredentials">
+                  </a> <!-- verifyLoginByInValidCredentials -->
+                  <span class="method-name">verifyLoginByInValidCredentials</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:325)
+	at testscript.LoginTest.verifyLoginByInValidCredentials(LoginTest.java:70)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(To verify login by Invalid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginByInValidUsername">
+                  </a> <!-- verifyLoginByInValidUsername -->
+                  <span class="method-name">verifyLoginByInValidUsername</span>
+                  <div class="stack-trace">org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:159)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:157)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:313)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:287)
+	at utilities.ExcelUtility.getStringData(ExcelUtility.java:27)
+	at testscript.LoginTest.verifyLoginByInValidUsername(LoginTest.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0xcfd06fa
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:770)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:150)
+	... 24 more
+... Removed 11 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(To test login by invalid username)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginByInValidUsername">
+                  </a> <!-- verifyLoginByInValidUsername -->
+                  <span class="method-name">verifyLoginByInValidUsername</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: The element with the reference 0c1d548f-a799-4776-9947-06d6be84b770 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, clickElement {id=0c1d548f-a799-4776-9947-06d6be84b770}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (7e14a7c5-939f-49c1-aeed-bf351e3ab487)] -&gt; xpath: //button[@class=&apos;btn btn-dark btn-block&apos;]]
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.LoginPage.signInClick(LoginPage.java:35)
+	at testscript.LoginTest.verifyLoginByInValidUsername(LoginTest.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(To test login by invalid username)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifyLoginByValidCredentials">
                   </a> <!-- verifyLoginByValidCredentials -->
                   <span class="method-name">verifyLoginByValidCredentials</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getCurrentUrl()&quot; because &quot;this.driver&quot; is null
-	at testscript.LoginTest.verifyLoginByValidCredentials(LoginTest.java:18)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
+                  <div class="stack-trace">java.lang.AssertionError: Login not successful with valid credentials expected [https://groceryapp.uniqassosiates.com/admin] but found [https://groceryapp.uniqassosiates.com/admin/login]
+	at testscript.LoginTest.verifyLoginByValidCredentials(LoginTest.java:28)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Login by valid credentials)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Grouping-class-failed -->
-          <div class="suite-Grouping-class-skipped">
+          </div> <!-- suite-parallel-class-failed -->
+          <div class="suite-parallel-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
               <span class="class-name">testscript.LoginTest</span>
@@ -167,13 +329,108 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="verifyLoginByInValidCredentials">
+                  </a> <!-- verifyLoginByInValidCredentials -->
+                  <span class="method-name">verifyLoginByInValidCredentials</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a5b4a36ea2f4a6a65bd07b18574c1e, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.210, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\melvi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 140.0.7339.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64a5b4a36ea2f4a6a65bd07b18574c1e
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:418)
+	at base.TestNGBase.browserClose(TestNGBase.java:45)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 19 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(To verify login by Invalid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginByInvalidPassword">
+                  </a> <!-- verifyLoginByInvalidPassword -->
+                  <span class="method-name">verifyLoginByInvalidPassword</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a5b4a36ea2f4a6a65bd07b18574c1e, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.210, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\melvi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 140.0.7339.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 64a5b4a36ea2f4a6a65bd07b18574c1e
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:418)
+	at base.TestNGBase.browserClose(TestNGBase.java:45)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 19 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(To test login using invalid password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifyLoginByValidCredentials">
                   </a> <!-- verifyLoginByValidCredentials -->
                   <span class="method-name">verifyLoginByValidCredentials</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getCurrentUrl()&quot; because &quot;this.driver&quot; is null
-	at testscript.LoginTest.verifyLoginByValidCredentials(LoginTest.java:18)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
+                  <div class="stack-trace">java.io.IOException: Stream Closed
+	at java.base/java.io.FileInputStream.available0(Native Method)
+	at java.base/java.io.FileInputStream.available(FileInputStream.java:473)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:627)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:1146)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:1098)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:1028)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:78)
+	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:245)
+	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:208)
+	at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.&lt;init&gt;(ZipArchiveFakeEntry.java:83)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:98)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:157)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:313)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:287)
+	at utilities.ExcelUtility.getStringData(ExcelUtility.java:27)
+	at testscript.LoginTest.verifyLoginByValidCredentials(LoginTest.java:16)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Login by valid credentials)                  </em>
@@ -184,57 +441,128 @@
                   <a name="verifyLoginByValidCredentials">
                   </a> <!-- verifyLoginByValidCredentials -->
                   <span class="method-name">verifyLoginByValidCredentials</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getCurrentUrl()&quot; because &quot;this.driver&quot; is null
+                  <div class="stack-trace">java.lang.AssertionError: Login not successful with valid credentials expected [https://groceryapp.uniqassosiates.com/admin] but found [https://groceryapp.uniqassosiates.com/admin/login]
+	at testscript.LoginTest.verifyLoginByValidCredentials(LoginTest.java:28)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Login by valid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginByValidCredentials">
+                  </a> <!-- verifyLoginByValidCredentials -->
+                  <span class="method-name">verifyLoginByValidCredentials</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [7e14a7c5-939f-49c1-aeed-bf351e3ab487, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.3, moz:accessibilityChecks: false, moz:buildID: 20250929153833, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45376, moz:profile: C:\Users\melvi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7e14a7c5-939f-49c1-aeed-bf351e3ab487
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:325)
 	at testscript.LoginTest.verifyLoginByValidCredentials(LoginTest.java:18)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Login by valid credentials)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Grouping-class-skipped -->
-        </div> <!-- panel Grouping -->
-        <div panel-name="test-xml-Grouping" class="panel">
+          </div> <!-- suite-parallel-class-skipped -->
+          <div class="suite-parallel-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testscript.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginByInvalidPassword">
+                  </a> <!-- verifyLoginByInvalidPassword -->
+                  <span class="method-name">verifyLoginByInvalidPassword</span>
+                  <em>
+(To test login using invalid password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginByValidCredentials">
+                  </a> <!-- verifyLoginByValidCredentials -->
+                  <span class="method-name">verifyLoginByValidCredentials</span>
+                  <em>
+(Login by valid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-parallel-class-passed -->
+        </div> <!-- panel parallel -->
+        <div panel-name="test-xml-parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\melvi\git\GroceryApplication\GroceryApplication\Grouping.xml</span>
+            <span class="header-content">C:\Users\melvi\git\GroceryApplication\GroceryApplication\multibrowser.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Grouping&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
-    &lt;groups&gt;
-      &lt;run&gt;
-        &lt;include name=&quot;smoke&quot;/&gt;
-      &lt;/run&gt;
-    &lt;/groups&gt;
+&lt;suite parallel=&quot;methods&quot; name=&quot;parallel&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;reportgeneration.Listener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;chromeTest&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testscript.HomeTest&quot;/&gt;
       &lt;class name=&quot;testscript.LoginTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
-&lt;/suite&gt; &lt;!-- Grouping --&gt;
+  &lt;/test&gt; &lt;!-- chromeTest --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;firefoxTest&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testscript.LoginTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- firefoxTest --&gt;
+&lt;/suite&gt; &lt;!-- parallel --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Grouping" class="panel">
+        <div panel-name="testlist-parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Grouping</span>
+            <span class="header-content">Tests for parallel</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">chromeTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">firefoxTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Grouping" class="panel">
+        <div panel-name="group-parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Grouping</span>
+            <span class="header-content">Groups for parallel</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
@@ -247,96 +575,240 @@
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Grouping" class="panel">
+        <div panel-name="times-parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Grouping</span>
+            <span class="header-content">Times for parallel</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Grouping');
-function tableData_Grouping() {
+suiteTableInitFunctions.push('tableData_parallel');
+function tableData_parallel() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyLoginByValidCredentials')
+data.setCell(0, 1, 'verifyLoginByInValidCredentials')
 data.setCell(0, 2, 'testscript.LoginTest')
-data.setCell(0, 3, 1712);
+data.setCell(0, 3, 2180);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyLoginByValidCredentials')
 data.setCell(1, 2, 'testscript.LoginTest')
-data.setCell(1, 3, 148);
+data.setCell(1, 3, 1767);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyLoginByValidCredentials')
+data.setCell(2, 1, 'verifyLoginByInvalidPassword')
 data.setCell(2, 2, 'testscript.LoginTest')
-data.setCell(2, 3, 130);
-window.suiteTableData['Grouping']= { tableData: data, tableDiv: 'times-div-Grouping'}
+data.setCell(2, 3, 1645);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyLoginByInValidUsername')
+data.setCell(3, 2, 'testscript.LoginTest')
+data.setCell(3, 3, 1596);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyLoginByValidCredentials')
+data.setCell(4, 2, 'testscript.LoginTest')
+data.setCell(4, 3, 877);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyLoginByValidCredentials')
+data.setCell(5, 2, 'testscript.LoginTest')
+data.setCell(5, 3, 760);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyLoginByValidCredentials')
+data.setCell(6, 2, 'testscript.LoginTest')
+data.setCell(6, 3, 382);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyLoginByValidCredentials')
+data.setCell(7, 2, 'testscript.LoginTest')
+data.setCell(7, 3, 162);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyLoginByInValidUsername')
+data.setCell(8, 2, 'testscript.LoginTest')
+data.setCell(8, 3, 135);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifyLoginByInValidCredentials')
+data.setCell(9, 2, 'testscript.LoginTest')
+data.setCell(9, 3, 0);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyLoginByInvalidPassword')
+data.setCell(10, 2, 'testscript.LoginTest')
+data.setCell(10, 3, 0);
+window.suiteTableData['parallel']= { tableData: data, tableDiv: 'times-div-parallel'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
-              <div id="times-div-Grouping">
-              </div> <!-- times-div-Grouping -->
+              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <div id="times-div-parallel">
+              </div> <!-- times-div-parallel -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Grouping" class="panel">
+        <div panel-name="reporter-parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Grouping</span>
+            <span class="header-content">Reporter output for parallel</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Grouping" class="panel">
+        <div panel-name="ignored-methods-parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testscript.HomeTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">VerifyLogout</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testscript.LoginTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyLoginByInValidCredentials</span>
-                <br/>
-                <span class="ignored-method-name">verifyLoginByInValidUsername</span>
-                <br/>
-                <span class="ignored-method-name">verifyLoginByInvalidPassword</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Grouping" class="panel">
+        <div panel-name="chronological-parallel" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">testscript.LoginTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">verifyLoginByValidCredentials</span>
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">initalizeBrowser(chrome)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">initalizeBrowser(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initalizeBrowser(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initalizeBrowser(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyLoginByInValidUsername</span>
+                <span class="method-start">2131 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyLoginByValidCredentials</span>
-                <span class="method-start">1722 ms</span>
+                <span class="method-start">2132 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserClose</span>
+                <span class="method-start">2275 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">browserClose</span>
+                <span class="method-start">2298 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initalizeBrowser(chrome)</span>
+                <span class="method-start">2551 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">browserClose</span>
+                <span class="method-start">2553 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">browserClose</span>
+                <span class="method-start">2554 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginByValidCredentials</span>
+                <span class="method-start">4023 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserClose</span>
+                <span class="method-start">4784 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initalizeBrowser(chrome)</span>
+                <span class="method-start">4786 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyLoginByValidCredentials</span>
-                <span class="method-start">1876 ms</span>
+                <span class="method-start">6193 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserClose</span>
+                <span class="method-start">6580 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initalizeBrowser(firefox)</span>
+                <span class="method-start">6887 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initalizeBrowser(firefox)</span>
+                <span class="method-start">6888 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initalizeBrowser(firefox)</span>
+                <span class="method-start">6888 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initalizeBrowser(firefox)</span>
+                <span class="method-start">6888 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginByInvalidPassword</span>
+                <span class="method-start">12181 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyLoginByInValidUsername</span>
+                <span class="method-start">12231 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyLoginByInValidCredentials</span>
+                <span class="method-start">13078 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginByValidCredentials</span>
+                <span class="method-start">13490 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserClose</span>
+                <span class="method-start">13833 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">browserClose</span>
+                <span class="method-start">13860 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">browserClose</span>
+                <span class="method-start">15263 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">browserClose</span>
+                <span class="method-start">15264 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initalizeBrowser(firefox)</span>
+                <span class="method-start">15272 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginByValidCredentials</span>
+                <span class="method-start">18762 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserClose</span>
+                <span class="method-start">19640 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
