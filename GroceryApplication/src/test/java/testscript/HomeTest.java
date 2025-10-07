@@ -18,16 +18,16 @@ public class HomeTest extends TestNGBase {
 	@Test(description = "To check logout functionality from Home page",priority = 1)
 	
 	public void VerifyLogout() throws IOException {
-		
+		    HomePage home;
 			String usernameValue=ExcelUtility.getStringData(1, 0, Constants.LOGINSHEET);
 			String passwordValue=ExcelUtility.getStringData(1, 1, Constants.LOGINSHEET);
 			LoginPage login = new LoginPage(driver);
-			login.enterUserName(usernameValue);
-			login.enterPassword(passwordValue);
-			login.signInClick();
-			HomePage home = new HomePage(driver);
+			login.enterUserName(usernameValue).enterPassword(passwordValue);
+			//login.enterPassword(passwordValue);
+			home =login.signInClick();
+			//HomePage home = new HomePage(driver);
 			home.adminClick();
-			home.logOut();
+			login =home.logOut();
 			
 			
 			String expected ="https://groceryapp.uniqassosiates.com/admin/login";

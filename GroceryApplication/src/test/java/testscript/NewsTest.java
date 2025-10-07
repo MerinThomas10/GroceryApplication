@@ -7,12 +7,14 @@ import org.testng.annotations.Test;
 import base.TestNGBase;
 import constant.Constants;
 import constant.Messages;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.NewsPage;
 import utilities.ExcelUtility;
 
 public class NewsTest extends TestNGBase {
-	
+	HomePage home;
+	NewsPage news;
 	@Test(description = "Add news" , priority = 1)
 	
 	public void verifyAddNews() throws IOException {
@@ -20,15 +22,15 @@ public class NewsTest extends TestNGBase {
 		String usernameValue=ExcelUtility.getStringData(1, 0, Constants.LOGINSHEET);
 		String passwordValue=ExcelUtility.getStringData(1, 1, Constants.LOGINSHEET);
 		LoginPage login = new LoginPage(driver);
-		login.enterUserName(usernameValue);
-		login.enterPassword(passwordValue);
-		login.signInClick();
+		login.enterUserName(usernameValue).enterPassword(passwordValue);
+		//login.enterPassword(passwordValue);
+		home =login.signInClick();
 		
-		NewsPage news = new NewsPage(driver);
-		news.newsMoreInfoClick();
-		news.newButtonClick();
-		news.addNewNews();
-		news.saveButtonClick();
+		//NewsPage news = new NewsPage(driver);
+		news = home.newsMoreInfoClick();
+		news.newButtonClick().addNewNews().saveButtonClick();
+		//news.addNewNews();
+		//news.saveButtonClick();
 		boolean isAlertDisplayed = news.newsAlertDisplay();
 		Assert.assertTrue(isAlertDisplayed,Messages.ADD_NEWS_ALERT_MSG);
 		
@@ -42,13 +44,13 @@ public class NewsTest extends TestNGBase {
 		String usernameValue=ExcelUtility.getStringData(1, 0, Constants.LOGINSHEET);
 		String passwordValue=ExcelUtility.getStringData(1, 1, Constants.LOGINSHEET);
 		LoginPage login = new LoginPage(driver);
-		login.enterUserName(usernameValue);
-		login.enterPassword(passwordValue);
-		login.signInClick();
+		login.enterUserName(usernameValue).enterPassword(passwordValue);
+		//login.enterPassword(passwordValue);
+		home =login.signInClick();
 		
-		NewsPage news = new NewsPage(driver);
-		news.newsMoreInfoClick();
-		news.homeLinkClick();
+		//NewsPage news = new NewsPage(driver);
+		news =home.newsMoreInfoClick();
+		home =news.homeLinkClick();
 	
 	
 		

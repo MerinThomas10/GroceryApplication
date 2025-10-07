@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="reportgeneration.Listener"/>
   </listeners>
-  <test thread-count="5" parallel="methods" name="chromeTest(failed)">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="testscript.LoginTest">
@@ -18,19 +18,5 @@
         </methods>
       </class> <!-- testscript.LoginTest -->
     </classes>
-  </test> <!-- chromeTest(failed) -->
-  <test thread-count="5" parallel="methods" name="firefoxTest(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="testscript.LoginTest">
-        <methods>
-          <include name="verifyLoginByValidCredentials"/>
-          <include name="verifyLoginByInValidUsername"/>
-          <include name="browserClose"/>
-          <include name="initalizeBrowser"/>
-          <include name="verifyLoginByInValidCredentials"/>
-        </methods>
-      </class> <!-- testscript.LoginTest -->
-    </classes>
-  </test> <!-- firefoxTest(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [parallel] -->

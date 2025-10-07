@@ -20,19 +20,22 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void enterUserName(String usernameValue) {
+	public LoginPage enterUserName(String usernameValue) {
 		WebElement userName = driver.findElement(By.xpath("//input[@name='username']"));
 		userName.sendKeys(usernameValue);
+		return this;
 	}
 	
-	public void enterPassword(String passwordValue) {
+	public LoginPage enterPassword(String passwordValue) {
 		WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
 		password.sendKeys(passwordValue);
+		return this;
    }
 	
-	public void signInClick() {
+	public HomePage signInClick() {
 		WebElement signIn = driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block']"));
 		signIn.click();
+		return new HomePage(driver);
 	}
 	
 	

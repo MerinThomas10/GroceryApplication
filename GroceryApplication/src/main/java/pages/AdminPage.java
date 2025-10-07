@@ -19,36 +19,36 @@ public class AdminPage {
 		
 	}
 	
-	@FindBy(xpath ="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']")WebElement adminTile;
-	public void adminTileClick() {
-		page.clickOnElement(adminTile);
-	}
-	
 	@FindBy(xpath ="//a[@class='btn btn-rounded btn-danger']")WebElement newButton;
-	public void newButtonClick() {
+	public AdminPage newButtonClick() {
 		page.clickOnElement(newButton);
+		return this;
 	}
 	
 	@FindBy(xpath ="//input[@id='username']")WebElement newUsername;
-	public void addNewUsername(String randomname) {
+	public AdminPage addNewUsername(String randomname) {
 		page.sendDataToElement(newUsername,randomname);
+		return this;
 	}
 	
 	@FindBy(xpath ="//input[@id='password']")WebElement newPassword;
-	public void addNewPassword(String randompassword) {
+	public AdminPage addNewPassword(String randompassword) {
 		page.sendDataToElement(newPassword,randompassword);
+		return this;
 	}
 	@FindBy(xpath ="//select[@id='user_type']")WebElement newUserType;
-	public void enterNewUserType(String userType) {
+	public AdminPage enterNewUserType(String userType) {
 		//Select select = new Select(newUserType);
 		//select.selectByVisibleText(userType);
 		page.selectByVisibleText(newUserType, userType);
+		return this;
 	}
 	
 	@FindBy(xpath ="//button[@name='Create']")WebElement saveButton;
-	public void saveButtonClick() {
+	public AdminPage saveButtonClick() {
 		wait.waitUntilClickable(driver, saveButton);
 		page.clickOnElement(saveButton);
+		return this;
 	}
 	
 	
@@ -59,26 +59,30 @@ public class AdminPage {
 	
 	
 	@FindBy(xpath ="//a[@class='btn btn-rounded btn-primary']")WebElement searchButton;
-	public void  searchButtonClick() {
+	public AdminPage  searchButtonClick() {
 		page.clickOnElement(searchButton);
+		return this;
 	}
 	@FindBy(xpath ="//input[@id='un']")WebElement userNameSearch;
-	public void searchByName(String randomname) {
+	public AdminPage searchByName(String randomname) {
 		
 		page.sendDataToElement(userNameSearch,randomname);
+		return this;
 	}
 	
 	
 	@FindBy(xpath ="//select[@name='ut']")WebElement userTypeSearch;
-	public void searchUserType( String userType) {
+	public AdminPage searchUserType( String userType) {
 		//Select select = new Select(userTypeSearch);
 		//select.selectByVisibleText(userType);
 		page.selectByVisibleText(userTypeSearch, userType);
+		return this;
 	}
 	
 	@FindBy(xpath ="//button[@name='Search']")WebElement searchButton1;
-	public void searchUser() {
+	public AdminPage searchUser() {
 		page.clickOnElement(searchButton1);
+		return this;
 	}
 	
 	@FindBy(xpath ="//h4[@class='card-title' and text()='Admin Users']")WebElement searchResult;
@@ -86,8 +90,9 @@ public class AdminPage {
 		return searchResult.isDisplayed();
 	}
 	@FindBy(xpath ="//a[@class='btn btn-rounded btn-warning']")WebElement resetButton;
-	public void resetButtonClick() {
+	public AdminPage resetButtonClick() {
 		resetButton.click();
+		return this;
 	}
 	
 	@FindBy(xpath ="//h4[@class='card-title' and text() ='Admin Users']")WebElement resetAssert;

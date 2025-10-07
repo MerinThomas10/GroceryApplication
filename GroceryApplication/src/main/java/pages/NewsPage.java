@@ -20,28 +20,28 @@ public class NewsPage {
 		PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(xpath ="//a[@class='small-box-footer'and @href ='https://groceryapp.uniqassosiates.com/admin/list-news']")WebElement newsMoreInfo;
-	public void newsMoreInfoClick() {
-		page.clickOnElement(newsMoreInfo);
-	}
+	
 	
 	
 	@FindBy(xpath ="//a[@class='btn btn-rounded btn-danger']")WebElement newButton;
-	public void newButtonClick() {
+	public NewsPage newButtonClick() {
 
 		wait.waitUntilClickable(driver, newButton);
 		page.clickOnElement(newButton);
+		return this;
 	}
 	
 	@FindBy(xpath ="//textarea[@id='news']")WebElement addNews;
-	public void addNewNews() {
+	public NewsPage addNewNews() {
 		page.sendDataToElement(addNews, Constants.NEW_NEWS);
+		return this;
 	}
 	
 	@FindBy(xpath ="//button[@name='create']")WebElement save;
-	public void saveButtonClick() {
+	public NewsPage saveButtonClick() {
 		
 		page.clickOnElement(save);
+		return this;
 	}
 	
 	
@@ -51,8 +51,9 @@ public class NewsPage {
 		return newsAlert.isDisplayed();
 	}
 	@FindBy(xpath ="//a[@href='https://groceryapp.uniqassosiates.com/admin/home' and text()='Home']")WebElement homeLink;
-	public void homeLinkClick() {
+	public HomePage homeLinkClick() {
 		page.clickOnElement(homeLink);
+		return new HomePage(driver);
 	
 	}
 }
