@@ -2,6 +2,7 @@ package testscript;
 
 import java.io.IOException;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import base.TestNGBase;
 import constant.Constants;
@@ -11,10 +12,11 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends TestNGBase {
+	HomePage home;
 	@Test(description = "Login by valid credentials",priority = 1, retryAnalyzer = retry.Retry.class,groups = {"smoke"})
 	
 	public void verifyLoginByValidCredentials() throws IOException {
-		HomePage home;
+		
 		String usernameValue=ExcelUtility.getStringData(1, 0, Constants.LOGINSHEET);
 		String passwordValue=ExcelUtility.getStringData(1, 1, Constants.LOGINSHEET);
 		System.out.println(driver.getCurrentUrl());
@@ -59,11 +61,11 @@ public void verifyLoginByInValidUsername() throws IOException {
 	
 }
 
-@Test(description = "To verify login by Invalid credentials",priority = 4)
+@Test(description = "To verify login by Invalid credentials",priority = 4, dataProvider = "loginProvider", groups = {"smoke"})
 
-public void verifyLoginByInValidCredentials() throws IOException {
-	String usernameValue=ExcelUtility.getStringData(4, 0, Constants.LOGINSHEET);
-	String passwordValue=ExcelUtility.getStringData(4, 1, Constants.LOGINSHEET);
+public void verifyLoginByInValidCredentials(String usernameValue, String passwordValue) throws IOException {
+	//String usernameValue=ExcelUtility.getStringData(4, 0, Constants.LOGINSHEET);
+	//String passwordValue=ExcelUtility.getStringData(4, 1, Constants.LOGINSHEET);
 	LoginPage login = new LoginPage(driver);
 	login.enterUserName(usernameValue).enterPassword(passwordValue).signInClick();
 	//login.enterPassword(passwordValue);
@@ -72,6 +74,14 @@ public void verifyLoginByInValidCredentials() throws IOException {
 	String actual = driver.getCurrentUrl();
 	Assert.assertEquals(actual, expected,Messages.INVALID_ASSERT_MSG);
 	
+}
+ @DataProvider(name="loginProvider")	//returns two dimensional object array
+public Object[][] getDataFromDataProvider() throws IOException
+{
+	return new Object[][] { new Object[] {"user","password"},
+		new Object[] {"username","pass"},
+		new Object[] {"user1","password1"}
+	};
 }
 
 
