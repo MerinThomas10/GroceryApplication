@@ -1,6 +1,6 @@
 package pages;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,10 +36,15 @@ public class LoginPage {
 		page.sendDataToElement(password, passwordValue);
 		return this;
    }
-	
+	@FindBy(xpath = "//button[text()='Sign In']")WebElement signIn;
 	public HomePage signInClick() {
-		WebElement signIn = driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block']"));
-		signIn.click();
+		/*
+		 * WebElement signIn =
+		 * driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block']"));
+		 * signIn.click();
+		 */
+		wait.waitUntilClickable(driver, signIn);
+		page.clickOnElement(signIn);
 		return new HomePage(driver);
 	}
 	
